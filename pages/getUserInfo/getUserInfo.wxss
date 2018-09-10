@@ -1,0 +1,9 @@
+/* pages/getUserInfo/getUserInfo.wxss */
+.primary-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: var(--color-link-blue);
+  font-size: var(--font-small);
+  padding: 20rpx 0;
+}

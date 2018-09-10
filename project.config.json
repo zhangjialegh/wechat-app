@@ -1,0 +1,53 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wx377afc7096874b4d",
+	"projectname": "dreamHacker",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "index添加id",
+					"pathName": "pages/index/index",
+					"query": "id=34&from=5"
+				},
+				{
+					"id": -1,
+					"name": "地图组件",
+					"pathName": "pages/map/map",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地图搜索",
+					"pathName": "pages/search/search"
+				}
+			]
+		}
+	}
+}

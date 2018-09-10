@@ -1,0 +1,8 @@
+<!--pages/getUserInfo/getUserInfo.wxml-->
+<view class="container">
+ <image src='https://wechat-pics.fangpinduo.com/wehome/website/banner/information-banner.jpeg' mode='widthFix' class='width-fix-image'></image>
+ <view class="wx-container">
+  <text class="primary-text">请完成微信授权以继续使用</text>
+  <button type="primary" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo"> 授权微信用户信息 </button>
+ </view>
+</view>

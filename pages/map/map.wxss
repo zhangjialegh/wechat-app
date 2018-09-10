@@ -1,0 +1,69 @@
+/* pages/map/map.wxss */
+.address-wrapper {
+  height: 8vh;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 30rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+.address-from-label {
+  width: 18rpx;
+  height: 18rpx;
+  background: #09BB07;
+  border-radius: 50%;
+}
+.address-image {
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  height: 60rpx;
+  width: 60rpx;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+.address-image>image {
+  width: 100%;
+  height: 100%;
+}
+.address-from-text {
+  color: #666;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+.map {
+  width: 100vw;
+  height: 92vh;
+  position: relative;
+}
+.location-self {
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+  box-shadow: 0 0 10rpx 0 rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 5rpx;
+}
+.location-image {
+  width: 60%;
+  height: 60%;
+}
+.map-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 80rpx;
+  height: 80rpx;
+}
+.navi-from-address {
+  color: #333;
+}

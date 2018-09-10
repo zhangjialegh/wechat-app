@@ -1,0 +1,60 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+
+  <view class="address-select-wrapper" wx:if="{{showCityList}}">
+    <input type="text" bindinput="inputCityChange" class="address-input" placeholder="城市中文或拼音"/>
+  </view>
+
+  <view class="address-select-wrapper" wx:else>
+    <text class="region-select" bindtap="getCityList">{{region}}</text>
+    <input placeholder="您在哪儿" type="text" bindinput="inputAddrChange" class="address-input"/>
+  </view>
+
+
+
+  <view class="address-wrapper-scroll">
+
+  <!-- 城市列表 -->
+  <view wx:if="{{showCityList}}">
+    <view class="address-current-city">
+      当前城市：{{currentCity}}
+    </view>
+
+    <!-- <view class="address-hot-city">
+      <view class="hot-city-title">
+        <text>☆ </text> 热门城市
+      </view>
+
+      <view class="hot-city-list" wx:for="{{hotCityList}}">
+        <view>{{item}}</view>
+      </view>
+      
+    </view> -->
+
+    <view class="address-hot-city">
+      <view class="hot-city-title">
+        城市列表
+      </view>
+
+      <view class="hot-city-list" wx:for="{{cityList}}" data-city="{{item}}" bindtap="selectCity">
+        <view>{{item.fullname}}</view>
+      </view>
+
+    </view>
+
+
+    </view>
+
+    <!-- 地址列表 -->
+    <view wx:else>
+      <view wx:for="{{poiAddressList}}" class="address-wrapper-list" bindtap="selectAddress" data-location="{{item.location}}">
+        <view class="address-title">{{item.title}}</view>
+        <text class="address-text" wx:if="{{item.address}}">{{item.address}}</text>
+        <text class="address-text" wx:else>{{item.category}}></text>
+      </view>
+    </view>
+    
+
+
+  </view>
+</view>

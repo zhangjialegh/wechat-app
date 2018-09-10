@@ -1,0 +1,82 @@
+/* pages/search/search.wxss */
+.address-select-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 20rpx 30rpx;
+  color: #666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.address-wrapper-scroll {
+  position: fixed;
+  top: 100rpx;
+  left: 0;
+  height: calc(100vh - 100rpx);
+  overflow: scroll;
+}
+.region-select {
+  width: 120rpx;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  padding-right: 30rpx;
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.address-input {
+  padding-left: 20rpx;
+  font-size: 32rpx;
+}
+.address-wrapper-list {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 30rpx;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.address-title {
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+}
+.address-text {
+  display: inline-block;
+  color: #666;
+  font-size: 26rpx;
+  line-height: 34rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.address-current-city {
+  padding: 0 30rpx;
+  height: 80rpx;
+  width: 100vw;
+  line-height: 80rpx;
+}
+
+/* 热门城市 */
+.hot-city-title {
+  height: 80rpx;
+  background: rgba(0,0,0,0.1);
+  width: 100vw;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+}
+.hot-city-list {
+  height: 80rpx;
+  width: 100vw;
+  padding: 0 30rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.hot-city-list.last {
+  border-bottom: none;
+}
