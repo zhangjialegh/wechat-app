@@ -1,0 +1,11 @@
+<!--pages/mine/mine.wxml-->
+<text>pages/mine/mine.wxml</text>
+
+ <!-- 头像及文字描述 -->
+<view class="top-wrapper">
+  <image src="{{userInfo.avatar}}" catchtap='avatarNavigator'></image>
+  <view>
+    <text class="text1">Hi {{userInfo.name}}，{{userDesc}}</text>
+    <text class="text2">{{topTitle}}</text>
+  </view>
+</view>

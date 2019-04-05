@@ -131,7 +131,7 @@ Page({
   selectAddress: function (e) {
     const location = e.currentTarget.dataset.location
     console.log(location,'location')
-    wx.redirectTo({
+    wx.switchTab({
       url: '/pages/map/map?lat='+location.lat+'&long='+location.lng,
     })
   },

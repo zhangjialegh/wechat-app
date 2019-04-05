@@ -22,7 +22,19 @@ Page({
     centerLong: 0,
     mapContext: null,
     locationAddress: '',
-    addressData: {}
+    addressData: {},
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      }],
+      color: "#FF0000",
+      width: 2,
+      dottedLine: true
+    }],
   },
   createMapContext: function () {
     const that = this
@@ -142,14 +154,28 @@ Page({
   },
 
   updateMarkerCenter: function (lat,long) {
+    this.setData({
+      markers: [{
+          id: 0,
+          latitude: lat,
+          longitude: long,
+          width: 50,
+          height: 50
+        }]
+    })
     // this.setData({
-    //   markers: [{
-    //       id: 0,
-    //       latitude: lat,
+    //   polyline: [{
+    //     points: [{
     //       longitude: long,
-    //       width: 50,
-    //       height: 50
-    //     }]
+    //       latitude: lat
+    //     }, {
+    //       longitude: 113.324520,
+    //       latitude: 23.21229
+    //     }],
+    //     color: "#FF0000",
+    //     width: 2,
+    //     dottedLine: true
+    //   }],
     // })
     this.locationToName(lat, long)
   },
@@ -172,6 +198,7 @@ Page({
     this.mapContext.moveToLocation()
   },
   selecAddress: function () {
+    console.log('fsfdfsdf')
     wx.navigateTo({
       url: '/pages/search/search',
     })
@@ -193,6 +220,11 @@ Page({
       }
     })
   },
+
+  // 导航路线
+  // navigationLine： function () {
+    
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -200,7 +232,7 @@ Page({
     qqmapsdk = new QQMapWX({
       key: '7YDBZ-EPIC3-QHH3S-YBKWX-DCZYQ-ETF2E'
     });
-    console.log(options,'addr options')
+    // console.log(options,'addr options')
     if (JSON.stringify(options) != "{}") {
       this.initLocation(options.lat, options.long)
     } else {
@@ -218,8 +250,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function (options) {
+    console.log(options, 'addr options')
   },
 
   /**

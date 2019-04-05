@@ -9,10 +9,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    redirect: ''
+    redirect: '/pages/index/index'
   },
 
   bindgetuserinfo(res) {
+    console.log(res,'res')
     const that = this
     if (res.detail.errMsg == 'getUserInfo:ok') {
       console.log(res)
@@ -21,9 +22,17 @@ Page({
         isGet: false,
         data: res.detail.userInfo,
         success: function (res) {
-          wx.redirectTo({
-            url: that.data.redirect,
-          })
+          console.log(res, that.data.redirect,'that.data.redirect')
+          const {redirect} = that.data
+          if (redirect.includes('pages/index/index') || redirect.includes('pages/map/map') || redirect.includes('pages/mine/mine')){
+            wx.switchTab({
+              url: that.data.redirect,
+            })
+          } else {
+            wx.redirectTo({
+              url: that.data.redirect,
+            })
+          }
         },
         fail: function (err) {
           console.log(err, 'failure')

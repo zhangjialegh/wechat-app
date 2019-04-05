@@ -1,14 +1,15 @@
 <!--pages/index/index.wxml-->
-<view class="container">
-    <dialog id='dialog' 
-      title='我是标题' 
-      content='恭喜你，学会了小程序组件' 
-      cancelText='知道了' 
-      confirm='谢谢你'
-      bind:cancelEvent="_cancelEvent"  
-      bind:confirmEvent="_confirmEvent">
-    </dialog>
-    
-    <button type="primary" bindtap="showDialog"> ClickMe! </button>
-    
+<view class="container section">
+  <view class="topic-item" bindtap='toggleTop' wx:for="{{topicList}}" data-order="{{item.order}}">
+    <view class="topic-title">
+    {{item.title}}<text>{{item.inteval}}</text>
+    </view>
+    <view class="topic-content-close {{open == item.order?'open':''}}">
+      <text class='topic-desc'>{{item.jsonstr.summary}}</text>
+
+      <view class="topic-source" wx:for="{{item.jsonstr.newsArray}}" wx:for-item="sor">{{sor.title}}<text>{{sor.siteName}}</text></view>
+
+      <!-- <view class='topic-more'>查看<text class='font_family icon-right'></text></view> -->
+    </view>
+  </view>
 </view>

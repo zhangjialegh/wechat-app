@@ -4,18 +4,23 @@
    <view class="address-from-label"></view>
    <view class="address-from-text">{{locationAddress}}</view>
    <view class="address-image" catchtap="addRecord">
-    <image mode="aspectFit" src="/images/record.png"></image>
+    <image mode="aspectFit" src="/assets/images/record.png"></image>
    </view>
    
  </view>
-  <map id="map" class="map" bindregionchange="mapregionchange" bindupdated="mapupdated" markers="{{markers}}" bindtap="tapmap" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true">
+  <map id="map" class="map" bindregionchange="mapregionchange" bindupdated="mapupdated" polyline="{{polyline}}" markers="{{markers}}" bindtap="tapmap" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true">
 
 
 
-  <cover-image src="/images/search-location.png" class="map-center"></cover-image>
+  <cover-image src="/assets/images/search-location.png" class="map-center"></cover-image>
+
+
+  <!-- <cover-view class="location-navigation" bindtap="navigationLine">
+    <cover-image src="/assets/images/location.png" class="location-image"></cover-image>
+  </cover-view> -->
 
   <cover-view class="location-self" bindtap="returnlocation">
-    <cover-image src="/images/location.png" class="location-image"></cover-image>
+    <cover-image src="/assets/images/location.png" class="location-image"></cover-image>
   </cover-view>
   </map>
 </view>

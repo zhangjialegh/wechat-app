@@ -1,22 +1,39 @@
 /**app.wxss**/
+@import '/assets/styles/iconfont.wxss';
 
 .container {
   height: 100%;
   --font-small: 32rpx;
+  --font-text-title: 35rpx;
+  --font-text-desc: 30rpx;
+  --font-text-small: 26rpx;
 
 
 
   --color-link-blue: #1499f8;
+  --color-base: #48a498;
+  --color-grey: #bfbfbf;
+  --color-dark: #000000;
+  --color-light: #999999;
+  --color-lighter: #e6e6e6;
+  --color-normal: #737373;
+  --color-darker: #333333;
 
 }
 
+/********通用属性*********/
+view {
+  box-sizing: border-box;
+}
 /*********容器属性*********/
 .wx-container {
   width: 100%;
   box-sizing: border-box;
   padding: 0 40rpx;
 }
-
+.container.section {
+  padding: 20rpx 30rpx;
+}
 /*********图片格式*********/
 /* 撑满宽度，长宽比不变 */
 .width-fix-image {

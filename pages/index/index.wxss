@@ -1,2 +1,61 @@
 /* pages/index/index.wxss */
+.topic-item {
+  width: 100%;
+  padding: 40rpx 0;
+  border-bottom: 1rpx solid var(--color-lighter);
+}
+.topic-content-close {
+  max-height: 0;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
 
+.topic-content-close.open {
+  max-height: 1000rpx;
+}
+.topic-title {
+  font-size: var(--font-text-title);
+  color: var(--color-dark);
+}
+.topic-title > text {
+  color: var(--color-light);
+  font-size: var(--font-text-desc);
+  margin-left: 20rpx;
+}
+.topic-desc {
+  display: block;
+  color: var(--color-normal);
+  font-size: var(--font-text-desc);
+  margin: 20rpx 0;
+  letter-spacing: 2rpx;
+}
+.topic-source {
+  color: var(--color-darker);
+  padding-left: 40rpx;
+  font-size: var(--font-text-small);
+  position: relative;
+  line-height: 34rpx;
+}
+
+.topic-source > text {
+  color: var(--color-light);
+  margin-left: 20rpx;
+}
+
+.topic-source::before {
+  content: '';
+  display: block;
+  height: 11rpx;
+  width: 11rpx;
+  border-radius: 50%;
+  border: 5rpx solid var(--color-light);
+  position: absolute;
+  top: 50%;
+  left: 5rpx;
+  transform: translateY(-50%);
+}
+.topic-more {
+  color: var(--color-darker);
+  text-align: right;
+  font-size: var(--font-text-small);
+}

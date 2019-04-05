@@ -1,15 +1,47 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/map/map",
     "pages/getUserInfo/getUserInfo",
     "pages/search/search",
-    "pages/index/index"
+    "pages/mine/mine"
   ],
   "window": {
+    "navigationBarBackgroundColor": "white",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "DreamHacker",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "calm",
-    "navigationBarBackgroundColor": "#fbf9fe",
-    "backgroundColor": "#fbf9fe"
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#48a498",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/icon-home.png",
+        "selectedIconPath": "assets/images/icon-home-active.png",
+        "enablePullDownRefresh": true
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "assets/images/icon-map.png",
+        "selectedIconPath": "assets/images/icon-map-active.png",
+        "enablePullDownRefresh": true
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/images/icon-user.png",
+        "selectedIconPath": "assets/images/icon-user-active.png",
+        "enablePullDownRefresh": true
+      }
+    ]
   },
   "networkTimeout": {
     "request": 10000,

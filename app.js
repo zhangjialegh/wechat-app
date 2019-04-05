@@ -37,7 +37,6 @@ App({
           data: data,
           success: function (data) {
             getApp().globalData.token = data.third_session
-            console.log(data,'calm')
             if(data.need) {
               wx.navigateTo({
                 url: '/pages/getUserInfo/getUserInfo' + path + query,
@@ -85,7 +84,6 @@ App({
             },
             success: function (data) {
               getApp().globalData.token = data.third_session
-              console.log(data,'2')
               if (data.need) {
                 wx.navigateTo({
                   url: 'pages/getUserInfo/getUserInfo',
@@ -135,7 +133,8 @@ App({
     // !! 注意但凡request必须要使用这个function而不是wx.request
     WxRequest: function (obj) {
       wx.request({
-        url: 'https://bestzjl.vicp.io/' + obj.url,
+        url: 'https://console.zicp.io/' + obj.url,
+        // url: 'http://localhost:3001/' + obj.url,
         method: obj.isGet && obj.isGet !== undefined ? 'get' : 'post',
         header: {
           'content-type': 'application/json',

@@ -39,6 +39,19 @@
   height: 92vh;
   position: relative;
 }
+.location-navigation {
+  position: fixed;
+  bottom: 150rpx;
+  right: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+  box-shadow: 0 0 10rpx 0 rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 5rpx;
+}
 .location-self {
   position: fixed;
   bottom: 50rpx;
